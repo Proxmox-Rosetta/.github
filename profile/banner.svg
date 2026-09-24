@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-label="Proxmox Rosetta — codegen toolchain for the Proxmox VE API">
+  <title>Proxmox Rosetta — codegen toolchain for the Proxmox VE API</title>
+
+  <!--
+    Master banner — the golden source, parent of the six rosetta/*
+    target banners. Same premium-dark system (near-black canvas, golden
+    glow, eyebrow with Rosetta-stone glyph, single-line hero, spectrum
+    bar, floating monospace block). Two things mark it as the source
+    rather than a translation:
+
+      1. The spectrum bar refracts through ALL SEVEN target colours
+         (Proxmox orange → Go cyan → Python blue → Ruby red
+         → TypeScript blue → Rust orange → Terraform purple
+         → Ansible red), not
+         just one. One source, every binding.
+
+      2. The right-hand block is a fan-out tree: schema.json branching
+         into the seven generated targets, each tinted its own brand
+         colour to match the banner it heads.
+  -->
+
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0E1420"/>
+      <stop offset="100%" stop-color="#06080E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="26%" cy="42%" r="58%">
+      <stop offset="0%"   stop-color="#F0B860" stop-opacity="0.42"/>
+      <stop offset="45%"  stop-color="#F0B860" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#F0B860" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hero" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFE6B8"/>
+    </linearGradient>
+    <!-- Full refraction: golden source through all SEVEN target colours -->
+    <linearGradient id="spectrum" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#F08020"/>
+      <stop offset="14%"  stop-color="#00ADD8"/>
+      <stop offset="29%"  stop-color="#4B8BD0"/>
+      <stop offset="43%"  stop-color="#CC342D"/>
+      <stop offset="57%"  stop-color="#3178C6"/>
+      <stop offset="71%"  stop-color="#DEA584"/>
+      <stop offset="86%"  stop-color="#9D7BEA"/>
+      <stop offset="100%" stop-color="#FF4136"/>
+    </linearGradient>
+    <linearGradient id="stoneglyph" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#F0B860"/>
+      <stop offset="100%" stop-color="#9E6818"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="1200" height="320"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="320" fill="url(#bg)"/>
+    <rect width="1200" height="320" fill="url(#glow)"/>
+
+    <!-- content shifted up for vertical balance; bg + glow stay full-bleed -->
+    <g transform="translate(0, -18)">
+
+    <!-- Eyebrow (bolder), plain text -->
+    <text x="92" y="84"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+          font-size="16" font-weight="800" letter-spacing="6" fill="#FFFFFF" opacity="0.72">CODEGEN&#160;&#160;TOOLCHAIN</text>
+
+    <!-- Logo lockup: Rosetta cascade mark (three colour-spined tablets) + single-line wordmark -->
+    <g transform="translate(82, 120)">
+      <rect x="10" y="8"  width="36" height="34" rx="5" fill="url(#stoneglyph)"/>
+      <rect x="10" y="8"  width="36" height="5" rx="5" fill="#FFFFFF" opacity="0.10"/>
+      <rect x="12" y="13" width="2.5" height="25" rx="1.25" fill="#00ADD8"/>
+      <g fill="#FFFFFF" opacity="0.55"><rect x="17" y="13" width="9" height="2.5" rx="1"/><rect x="28" y="13" width="6" height="2.5" rx="1"/><rect x="36" y="13" width="6" height="2.5" rx="1"/></g>
+      <rect x="18" y="20" width="36" height="34" rx="5" fill="url(#stoneglyph)"/>
+      <rect x="18" y="20" width="36" height="5" rx="5" fill="#FFFFFF" opacity="0.10"/>
+      <rect x="20" y="25" width="2.5" height="25" rx="1.25" fill="#9D7BEA"/>
+      <path d="M25 28 Q28 26 31 28 T37 28 T43 28 T49 28" stroke="#FFFFFF" stroke-width="1.2" opacity="0.55" fill="none"/>
+      <rect x="26" y="32" width="36" height="34" rx="5" fill="url(#stoneglyph)"/>
+      <rect x="26" y="32" width="36" height="5" rx="5" fill="#FFFFFF" opacity="0.10"/>
+      <rect x="28" y="37" width="2.5" height="25" rx="1.25" fill="#F08020"/>
+      <g fill="#FFFFFF" opacity="0.55"><rect x="33" y="40" width="20" height="2.5" rx="1"/><rect x="33" y="46" width="14" height="2.5" rx="1"/></g>
+      <g fill="#FFFFFF" opacity="0.5"><rect x="33" y="54" width="3" height="3" rx="1"/><rect x="38" y="54" width="3" height="3" rx="1"/><rect x="43" y="54" width="3" height="3" rx="1"/><rect x="48" y="54" width="3" height="3" rx="1"/></g>
+    </g>
+    <text x="152" y="180"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif"
+          font-size="64" font-weight="800" fill="url(#hero)" letter-spacing="-2">Proxmox Rosetta</text>
+
+    <!-- Refraction spectrum: golden source → all SEVEN target colours -->
+    <rect x="92" y="228" width="360" height="6" rx="3" fill="url(#spectrum)"/>
+    <circle cx="92"  cy="231" r="5" fill="#F08020"/>
+    <circle cx="143" cy="231" r="4" fill="#00ADD8"/>
+    <circle cx="195" cy="231" r="4" fill="#4B8BD0"/>
+    <circle cx="246" cy="231" r="4" fill="#CC342D"/>
+    <circle cx="298" cy="231" r="4" fill="#3178C6"/>
+    <circle cx="349" cy="231" r="4" fill="#DEA584"/>
+    <circle cx="401" cy="231" r="4" fill="#9D7BEA"/>
+    <circle cx="452" cy="231" r="5" fill="#FF4136"/>
+
+    <!-- Tagline -->
+    <text x="92" y="266"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif"
+          font-size="20" font-weight="500" fill="#FFFFFF" opacity="0.82">Codegen toolchain for the Proxmox VE API.</text>
+
+    <!-- Italic family line -->
+    <text x="92" y="292"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="16" font-style="italic" fill="#FFFFFF" opacity="0.55">One source spec — many faithful bindings.</text>
+
+    <!-- Fan-out tree: one schema, SEVEN generated targets (each in its brand colour) + room to grow -->
+    <rect x="800" y="112" width="3" height="194" rx="1.5" fill="url(#spectrum)"/>
+    <text x="824" y="130"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">
+      <tspan fill="#F0B860">schema.json</tspan>
+    </text>
+    <text x="824" y="152"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#C9D1D9">  ├─ </tspan><tspan fill="#00ADD8">golang-sdk</tspan>
+    </text>
+    <text x="824" y="174"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#C9D1D9">  ├─ </tspan><tspan fill="#4B8BD0">python-sdk</tspan>
+    </text>
+    <text x="824" y="196"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#C9D1D9">  ├─ </tspan><tspan fill="#CC342D">ruby-sdk</tspan>
+    </text>
+    <text x="824" y="218"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#C9D1D9">  ├─ </tspan><tspan fill="#3178C6">typescript-sdk</tspan>
+    </text>
+    <text x="824" y="240"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#C9D1D9">  ├─ </tspan><tspan fill="#DEA584">rust-sdk</tspan>
+    </text>
+    <text x="824" y="262"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#C9D1D9">  ├─ </tspan><tspan fill="#9D7BEA">terraform-provider</tspan>
+    </text>
+    <text x="824" y="284"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#C9D1D9">  ├─ </tspan><tspan fill="#FF4136">ansible-collection</tspan>
+    </text>
+    <text x="824" y="306"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#C9D1D9">  └─ </tspan><tspan fill="#F0B860">+ name it, we generate it</tspan>
+    </text>
+    </g>
+
+    <!-- card keyline: gold (source) frame -->
+    <rect x="10" y="10" width="1180" height="300" rx="18" fill="none" stroke="#F0B860" stroke-opacity="0.16" stroke-width="1.5"/>
+  </g>
+</svg>
